@@ -120,5 +120,5 @@ for f in sorted((ROOT / "pages").glob("**/*.html")):
 
 (OUT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     + "".join(f"  <url><loc>{u}</loc></url>\n" for u in SITEMAP) + "</urlset>\n")
-(OUT / "robots.txt").write_text("User-agent: *\nDisallow: /_source/\n\nSitemap: " + SITE + "sitemap.xml\n")
+(OUT / "robots.txt").write_text("User-agent: *\nDisallow: /_source/\nDisallow: /media/\n\nSitemap: " + SITE + "sitemap.xml\n")
 print("built sitemap.xml, robots.txt")
