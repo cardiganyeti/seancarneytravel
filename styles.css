@@ -155,3 +155,10 @@ figure { margin: 0; }
 .hero figcaption { font-size: 0.92rem; color: var(--ink-soft); padding-top: 0.5rem; }
 .split ul { padding-left: 1.2rem; }
 .split li { margin-bottom: 0.35rem; }
+
+/* Personal essays: easier phone reading */
+.essay p { margin-bottom: 1.5em; line-height: 1.75; }
+.essay .lede { line-height: 1.6; }
+.essay figure { margin: 2.75rem 0; }
+.essay .essay-break { text-align: center; letter-spacing: 0.5em; color: var(--ink-soft); margin: 2.5rem 0; }
+@media (max-width: 600px) { .essay figure { margin-inline: -1rem; } .essay figure img { border-radius: 0; } }
