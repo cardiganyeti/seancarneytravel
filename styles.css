@@ -134,6 +134,7 @@ figure { margin: 0; }
 .verdict { border-left: 4px solid var(--copper); background: var(--paper-2); padding: 1.25rem 1.5rem; margin: 2.5rem 0; border-radius: 0 6px 6px 0; }
 .verdict h2 { margin-top: 0; }
 .meta { color: var(--ink-soft); font-size: 1rem; }
+.dek { font-size: 1.3rem; line-height: 1.45; color: var(--ink-soft); margin: -0.25rem 0 1rem; max-width: 34em; }
 
 /* Footer */
 .site-footer { border-top: 1px solid var(--line); padding-block: 2.5rem; font-size: 1rem; color: var(--ink-soft); }
