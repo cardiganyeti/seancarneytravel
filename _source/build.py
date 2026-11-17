@@ -78,6 +78,7 @@ def page(rel_out, title, description, body, current=None):
   <div class="wrap">
     <div>
       <h2>Sean Carney, Travel Advisor</h2>
+      <p>Time Well Spent: travel with less to prove.</p>
       <p>Based in Los Angeles. Usually somewhere with coffee and grey skies.</p>
       <p>An independent advisor with Fora Travel.</p>
     </div>
