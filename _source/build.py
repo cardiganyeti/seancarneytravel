@@ -4,8 +4,8 @@ import os, re, pathlib, json, html as htmlmod
 ROOT = pathlib.Path(__file__).parent
 OUT = ROOT.parent / "site"
 FORM = "https://secure.foratravel.com/intake/ZT49q4ptG1"
-NEWSLETTER = "https://www.slowcrossings.com/subscribe"
-LETTER = "https://www.slowcrossings.com/"
+NEWSLETTER = "https://slowcrossings.substack.com/subscribe"
+LETTER = "https://slowcrossings.substack.com/"
 SITE = "https://seancarneytravel.com/"
 SITEMAP = []
 
