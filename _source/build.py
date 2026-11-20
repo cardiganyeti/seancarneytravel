@@ -5,16 +5,17 @@ ROOT = pathlib.Path(__file__).parent
 OUT = ROOT.parent / "site"
 FORM = "https://secure.foratravel.com/intake/ZT49q4ptG1"
 NEWSLETTER = "https://www.slowcrossings.com/subscribe"
+LETTER = "https://www.slowcrossings.com/"
 SITE = "https://seancarneytravel.com/"
 SITEMAP = []
 
-NAV = [("Journal", "journal/index.html"), ("How I work", "how-i-work.html"), ("About", "about.html")]
+NAV = [("The Letter", LETTER), ("How I work", "how-i-work.html"), ("About", "about.html")]
 
 def page(rel_out, title, description, body, current=None):
     depth = rel_out.count("/")
     up = "../" * depth
     nav = "".join(
-        f'<li><a href="{up}{href}"{" aria-current=\"page\"" if current == label else ""}>{label}</a></li>'
+        f'<li><a href="{href if href.startswith("http") else up + href}"{" aria-current=\"page\"" if current == label else ""}>{label}</a></li>'
         for label, href in NAV
     )
     url = SITE + ("" if rel_out == "index.html" else rel_out.replace("index.html", ""))
@@ -72,7 +73,7 @@ def page(rel_out, title, description, body, current=None):
   </div>
 </header>
 <main id="main">
-{body.replace("{UP}", up).replace("{FORM}", FORM).replace("{NEWSLETTER}", NEWSLETTER)}
+{body.replace("{UP}", up).replace("{FORM}", FORM).replace("{NEWSLETTER}", NEWSLETTER).replace("{LETTER}", LETTER)}
 </main>
 <footer class="site-footer">
   <div class="wrap">
